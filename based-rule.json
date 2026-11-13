@@ -1,0 +1,286 @@
+{
+  "judul": "Rekomendasi formasi, gaya menyerang, dan gaya bertahan tim sepak bola",
+  "batas": "Input hanya formasi dan taktik lawan; hasilnya formasi dan taktik tim kita. Aturan berasal dari analisis empat pertandingan, artikel teori taktik, dan laporan FIFA Technical Study Group. Lawan yang dicakup hanya berformasi 4-4-2, 4-3-3, 4-2-3-1, dan 3-4-2-1. Hasilnya saran awal, bukan keputusan akhir.",
+  "sumber": {
+    "S1": "Spain 1 Argentina 0: World Cup final tactical analysis, Coaches' Voice, https://learning.coachesvoice.com/cv/spain-argentina-2026-world-cup-final-tactical-analysis/, diakses 13 Nov 2026",
+    "S2": "Barcelona 1-2 Real Madrid: Kylian Mbappé Strikes Twice as José Mourinho Claims Clásico Win, Opta Analyst (Harry Carr, 25 Okt 2026), https://theanalyst.com/articles/barcelona-vs-real-madrid-el-clasico-live-stats-10-2026, diakses 13 Nov 2026",
+    "S3": "Inter Milan vs Como tactical analysis, Goal.com, https://www.goal.com/en/news/inter-milan-vs-como-the-tactics-board-clinical-transitions-overwhelm-the-visitors-possession-game/blt7e8dc40c564e2e49, diakses 13 Nov 2026",
+    "S4": "AC Milan vs Inter Milan tactical analysis, Goal.com, https://www.goal.com/id/berita/ac-milan-vs-inter-bedah-taktik-penguasaan-bola-versus-presisi-saat-pendekatan-efektif-milan-mengungguli-banyaknya-serangan-inter/bltc21b3fccda8dead3, diakses 13 Nov 2026",
+    "S5": "How to beat common pressing strategies, Total Football Analysis (Cameron Meighan, 10 Feb 2020), https://totalfootballanalysis.com/article/how-to-beat-common-pressing-strategies-tactical-analysis-tactics, diakses 13 Nov 2026",
+    "S6": "Round review: Mid and low blocks and attacking transitions in the spotlight, FIFA Training Centre (Technical Study Group), 26 Jun 2026, https://www.fifatrainingcentre.com/en/fifa-world-cup-2026/second-round-review-mid-blocks-and-attacking-transitions.php, diakses 13 Nov 2026",
+    "S7": "Technical Study Group hails competitive 48-team FIFA World Cup as goals and intensity rise, FIFA, 30 Jun 2026, https://inside.fifa.com/talent-development/technical-study-group/news/tsg-technical-insights-world-cup-2026-otto-addo-gilberto-silva, diakses 13 Nov 2026"
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jenis": "formasi",
+      "jika": [
+        "lawan formasi 4-4-2",
+        "lawan bertahan low-block"
+      ],
+      "mode": "dan",
+      "maka": "formasi 4-2-3-1",
+      "detail": "Gunakan formasi 4-2-3-1.",
+      "sumber": "S1, S5"
+    },
+    {
+      "id": "R2",
+      "jenis": "formasi",
+      "jika": [
+        "lawan formasi 4-3-3",
+        "lawan mengandalkan penguasaan bola",
+        "lawan menaikkan garis pertahanan"
+      ],
+      "mode": "dan",
+      "maka": "formasi 4-2-3-1",
+      "detail": "Gunakan formasi 4-2-3-1.",
+      "sumber": "S2"
+    },
+    {
+      "id": "R3",
+      "jika": [
+        "lawan formasi 4-2-3-1",
+        "lawan mengandalkan penguasaan bola"
+      ],
+      "mode": "dan",
+      "maka": "formasi 3-5-2",
+      "detail": "Gunakan formasi 3-5-2.",
+      "sumber": "S3"
+    },
+    {
+      "id": "R4",
+      "jika": [
+        "lawan formasi 3-4-2-1",
+        "lawan menaikkan bek sayap"
+      ],
+      "mode": "dan",
+      "maka": "formasi 3-4-2-1",
+      "detail": "Gunakan formasi 3-4-2-1.",
+      "sumber": "S4"
+    },
+    {
+      "id": "R5",
+      "jenis": "menyerang",
+      "jika": [
+        "formasi 4-2-3-1",
+        "lawan formasi 4-4-2"
+      ],
+      "mode": "dan",
+      "maka": "menyerang: penguasaan bola dan rotasi lini tengah",
+      "detail": "Penguasaan bola, pergerakan dinamis lini tengah (situasi 3v2), penyerang turun menjemput bola sementara gelandang maju, serangan bek ke depan membebaskan penyerang sayap masuk ke dalam.",
+      "sumber": "S1, S5"
+    },
+    {
+      "id": "R6",
+      "jenis": "bertahan",
+      "jika": [
+        "formasi 4-2-3-1",
+        "lawan formasi 4-4-2"
+      ],
+      "mode": "dan",
+      "maka": "bertahan: rebut bola cepat dan rest-defence rapat",
+      "detail": "Memenangkan bola kembali dengan cepat dan menerapkan posisi rest-defence yang sangat rapat.",
+      "sumber": "S1, S7"
+    },
+    {
+      "id": "R7",
+      "jenis": "menyerang",
+      "jika": [
+        "formasi 4-2-3-1",
+        "lawan formasi 4-3-3"
+      ],
+      "mode": "dan",
+      "maka": "menyerang: transisi cepat dan serangan balik",
+      "detail": "Transisi cepat dan serangan balik menusuk lini pertahanan tinggi lawan.",
+      "sumber": "S2"
+    },
+    {
+      "id": "R8",
+      "jenis": "bertahan",
+      "jika": [
+        "formasi 4-2-3-1",
+        "lawan formasi 4-3-3"
+      ],
+      "mode": "dan",
+      "maka": "bertahan: blok mid-to-low rapat",
+      "detail": "Blok pertahanan rapat (mid-to-low block), memotong aliran umpan di lini tengah.",
+      "sumber": "S2, S6"
+    },
+    {
+      "id": "R9",
+      "jenis": "menyerang",
+      "jika": [
+        "formasi 3-5-2",
+        "lawan formasi 4-2-3-1"
+      ],
+      "mode": "dan",
+      "maka": "menyerang: umpan jauh dan serangan balik cepat",
+      "detail": "Presisi umpan jauh (long ball), transisi cepat, dan serangan balik cepat.",
+      "sumber": "S3"
+    },
+    {
+      "id": "R10",
+      "jenis": "bertahan",
+      "jika": [
+        "formasi 3-5-2",
+        "lawan formasi 4-2-3-1"
+      ],
+      "mode": "dan",
+      "maka": "bertahan: blok rendah",
+      "detail": "Blok pertahanan rendah (low-block) yang membatasi ruang gerak lawan.",
+      "sumber": "S3, S6"
+    },
+    {
+      "id": "R11",
+      "jenis": "menyerang",
+      "jika": [
+        "formasi 3-4-2-1",
+        "lawan formasi 3-4-2-1"
+      ],
+      "mode": "dan",
+      "maka": "menyerang: serangan balik vertikal",
+      "detail": "Serangan balik vertikal cepat untuk mengeksploitasi ruang kosong di area bek sayap lawan.",
+      "sumber": "S4"
+    },
+    {
+      "id": "R12",
+      "jenis": "bertahan",
+      "jika": [
+        "formasi 3-4-2-1",
+        "lawan formasi 3-4-2-1"
+      ],
+      "mode": "dan",
+      "maka": "bertahan: blok mid-to-low asimetris dan counter-pressing",
+      "detail": "Kerapatan blok mid-to-low, pertahanan asimetris (memaksa lawan mengalirkan bola ke sisi lapangan), dan counter-pressing.",
+      "sumber": "S4, S6"
+    },
+    {
+      "id": "R13",
+      "jenis": "analisis",
+      "jika": [
+        "menyerang: penguasaan bola dan rotasi lini tengah",
+        "lawan bertahan low-block"
+      ],
+      "mode": "dan",
+      "maka": "penguasaan bola sabar efektif membongkar low-block",
+      "detail": "Penguasaan bola sabar dan rotasi dinamis lini tengah efektif membongkar low-block.",
+      "sumber": "S1"
+    },
+    {
+      "id": "R14",
+      "jenis": "analisis",
+      "jika": [
+        "menyerang: transisi cepat dan serangan balik",
+        "lawan menaikkan garis pertahanan"
+      ],
+      "mode": "dan",
+      "maka": "transisi cepat memanfaatkan ruang di belakang garis tinggi lawan",
+      "detail": "Transisi cepat memanfaatkan ruang di belakang garis pertahanan tinggi lawan.",
+      "sumber": "S2, S6"
+    },
+    {
+      "id": "R15",
+      "jenis": "analisis",
+      "jika": [
+        "menyerang: serangan balik vertikal",
+        "lawan menaikkan bek sayap"
+      ],
+      "mode": "dan",
+      "maka": "serangan balik vertikal ke ruang di belakang bek sayap lawan",
+      "detail": "Serangan balik vertikal ke ruang kosong di belakang bek sayap lawan yang naik.",
+      "sumber": "S4, S6"
+    },
+    {
+      "id": "R16",
+      "jenis": "saran",
+      "jika": [
+        "transisi cepat memanfaatkan ruang di belakang garis tinggi lawan",
+        "serangan balik vertikal ke ruang di belakang bek sayap lawan"
+      ],
+      "mode": "atau",
+      "maka": "saran: koordinasi bek tengah dan gelandang bertahan",
+      "detail": "Koordinasi bek tengah dan gelandang bertahan kunci untuk memutus suplai bola terobosan lawan.",
+      "sumber": "S2, S4, S7"
+    },
+    {
+      "id": "R17",
+      "jenis": "saran",
+      "jika": [
+        "penguasaan bola sabar efektif membongkar low-block"
+      ],
+      "mode": "dan",
+      "maka": "saran: pemain kreatif antar-lini",
+      "detail": "Perlu pemain kreatif antar-lini untuk mengeksploitasi celah kecil di antara lini pertahanan dan tengah lawan.",
+      "sumber": "S1"
+    },
+    {
+      "id": "R18",
+      "jenis": "antara",
+      "jika": [
+        "lawan membangun serangan dari belakang lewat double pivot",
+        "lawan mengandalkan penguasaan bola"
+      ],
+      "mode": "atau",
+      "maka": "lawan bermain lewat koridor tengah",
+      "detail": "Lawan membangun serangan lewat koridor tengah.",
+      "sumber": "S3"
+    },
+    {
+      "id": "R19",
+      "jenis": "saran",
+      "jika": [
+        "lawan bermain lewat koridor tengah",
+        "formasi 3-5-2"
+      ],
+      "mode": "dan",
+      "maka": "saran: tutup koridor tengah",
+      "detail": "Tutup koridor tengah dengan blok rapat agar lawan terpaksa mengandalkan umpan silang dan tembakan jarak jauh.",
+      "sumber": "S3"
+    },
+    {
+      "id": "R20",
+      "jenis": "analisis",
+      "jika": [
+        "menyerang: umpan jauh dan serangan balik cepat",
+        "lawan menaikkan garis pertahanan"
+      ],
+      "mode": "dan",
+      "maka": "umpan panjang vertikal efektif melawan garis tinggi lawan",
+      "detail": "Umpan panjang vertikal langsung ke penyerang efektif melewati lini tengah dan mengeksploitasi garis pertahanan tinggi lawan.",
+      "sumber": "S3"
+    },
+    {
+      "id": "R21",
+      "jenis": "saran",
+      "jika": [
+        "lawan melakukan counter-pressing agresif setelah kehilangan bola"
+      ],
+      "mode": "dan",
+      "maka": "saran: amankan umpan pertama",
+      "detail": "Amankan umpan pertama dan hindari kehilangan bola di area tengah, karena lawan langsung menekan balik setelah kehilangan bola.",
+      "sumber": "S6"
+    },
+    {
+      "id": "R22",
+      "jenis": "saran",
+      "jika": [
+        "lawan bertahan mid-block yang menggiring bola ke sisi lapangan"
+      ],
+      "mode": "dan",
+      "maka": "saran: siapkan rencana di area sayap",
+      "detail": "Siapkan rencana serangan di area sayap karena mid-block lawan menggiring bola ke sisi lapangan.",
+      "sumber": "S6"
+    },
+    {
+      "id": "R23",
+      "jenis": "saran",
+      "jika": [
+        "lawan mengandalkan serangan balik cepat setelah blok bertahan"
+      ],
+      "mode": "dan",
+      "maka": "saran: jaga struktur bertahan saat menyerang",
+      "detail": "Jaga struktur bertahan (rest-defence) saat menyerang karena lawan cepat mengubah penguasaan bola menjadi serangan balik.",
+      "sumber": "S6, S7"
+    }
+  ]
+}
